@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templat Cetak Surat</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      .page-container {
+        position: relative;
+        width: 21cm;
+        min-height: 29.7cm;
+        background-color: white;
+        margin: 20px;
+        padding: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .header img {
+        width: 100%;
+        display: block;
+      }
+
+      .content {
+        padding: 4.5cm 2.5cm 5cm 2.5cm;
+        line-height: 1.6;
+        font-size: 12pt;
+        position: relative;
+        z-index: 2;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        max-width: 450px;
+        z-index: 1;
+      }
+
+      .footer img {
+        width: 100%;
+        display: block;
+      }
+
+      .double-line {
+        border: 0;
+        border-bottom: 3px double #000;
+        margin: 5px 0 20px 0;
+      }
+
+      @media print {
+        body {
+          background-color: white;
+          margin: 0;
+          padding: 0;
+        }
+
+        .page-container {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          min-height: 100%;
+          box-shadow: none;
+          position: relative;
+          overflow: visible;
+        }
+
+        .header,
+        .footer,
+        .content {
+          position: absolute;
+        }
+        .content {
+          width: 100%;
+          box-sizing: border-box;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="header">
+        <img src="header.jpg" alt="Header Surat" />
+      </div>
+
+      <div class="content">
+        <p style="padding-top: 50px">
+          <strong>Nomor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</strong>
+          001/CONTOH/SMK/VIII/2025<br />
+          <strong>Lampiran :</strong> -<br />
+          <strong>Tanggal :</strong> 25 Oktober 2025<br />
+          <strong>Perihal &nbsp;&nbsp;&nbsp;&nbsp;:</strong> Undangan Rapat
+        </p>
+
+        <p>
+          <strong>Yth. Bapak/Ibu Orang Tua/Wali Murid</strong><br />
+          Kelas XII SMK Krian 1 Sidoarjo<br />
+          di Tempat
+        </p>
+
+        <p>Dengan hormat,</p>
+        <p>
+          Sehubungan dengan akan dilaksanakannya Ujian Sekolah, kami mengundang
+          Bapak/Ibu Orang Tua/Wali Murid untuk menghadiri rapat persiapan yang
+          akan diselenggarakan pada:
+        </p>
+        <table style="margin-left: 40px">
+          <tr>
+            <td style="width: 100px">Hari, tanggal</td>
+            <td>: Sabtu, 6 September 2025</td>
+          </tr>
+          <tr>
+            <td>Waktu</td>
+            <td>: 09.00 WIB - Selesai</td>
+          </tr>
+          <tr>
+            <td>Tempat</td>
+            <td>: Aula SMK Krian 1 Sidoarjo</td>
+          </tr>
+        </table>
+
+        <p>
+          Mengingat pentingnya acara ini, kami sangat mengharapkan kehadiran
+          Bapak/Ibu tepat pada waktunya. Atas perhatian dan kerjasamanya, kami
+          ucapkan terima kasih.
+        </p>
+        <br />
+      </div>
+
+      <div class="footer">
+        <img src="footer.jpg" alt="Footer Surat" />
+      </div>
+    </div>
+  </body>
+</html>
